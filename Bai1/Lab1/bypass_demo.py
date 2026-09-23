@@ -5,8 +5,24 @@ MỤC ĐÍCH GIÁO DỤC: chạy CHÍNH các validator trong securevalidator/cor
 một tập chuỗi input được soạn sẵn, rồi in ra chuỗi nào "lọt" qua bộ lọc.
 Không sửa cấu trúc code của lab — chỉ thay đổi các chuỗi input để quan sát.
 
-Chạy:  python bypass_demo.py
+File này cố ý đặt NGOÀI secure-validator-lab/ (folder chứa nguyên xi source từ
+sách) để phân biệt rõ: secure-validator-lab/ = Blue (không đụng), file này = Red.
+
+Chạy (từ thư mục Lab1/, ngoài secure-validator-lab/):  python bypass_demo.py
 """
+
+import os
+import sys
+
+if sys.stdout.encoding and sys.stdout.encoding.lower() != "utf-8":
+    sys.stdout.reconfigure(encoding="utf-8")  # tránh UnicodeEncodeError trên console cp1252 (Windows)
+
+# bypass_demo.py nằm ngoài secure-validator-lab/ nên phải tự thêm folder đó
+# vào sys.path trước khi import package Blue bên trong (và chdir vào đó để
+# context_xss_demo() import app.py với đúng cwd của Flask app).
+_LAB_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "secure-validator-lab")
+sys.path.insert(0, _LAB_DIR)
+os.chdir(_LAB_DIR)
 
 from securevalidator import (
     validate_email, validate_url, validate_filename,
