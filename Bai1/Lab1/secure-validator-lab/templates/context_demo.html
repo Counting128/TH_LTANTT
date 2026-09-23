@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>XSS theo ngữ cảnh — SecureValidator Lab</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://unpkg.com/@picocss/pico@1.*/css/pico.min.css">
+  <style>
+    body {margin:auto; max-width:760px;}
+    h1 {text-align:center;}
+    .bad {border-left:4px solid #d32f2f; padding-left:1rem;}
+    .good {border-left:4px solid #388e3c; padding-left:1rem;}
+    code {background:#f3f3f3; padding:.15rem .4rem; border-radius:.3rem;}
+    small {color:#555;}
+  </style>
+</head>
+<body>
+  <main class="container">
+    <h1>XSS theo ngữ cảnh</h1>
+    <p><small>Cùng một hàm <code>sanitize_html_input</code> (= <code>html.escape</code>,
+      giữ nguyên core). Điểm khác duy nhất: nơi output được đặt vào.</small></p>
+
+    <form method="POST">
+      <label>Nhập một "link hồ sơ":
+        <input type="text" name="link" value="{{ payload }}"
+               placeholder="javascript:alert(document.domain)">
+      </label>
+      <button type="submit">Render</button>
+    </form>
+
+    {% if payload %}
+    <p><strong>Sau khi escape:</strong> <code>{{ escaped }}</code>
+      <br><small>Chú ý: <code>javascript:</code> không chứa <code>&lt; &gt; &amp; " '</code>
+      nên html.escape để nguyên.</small></p>
+
+    <hr>
+    <div class="bad">
+      <h3>❌ Ngữ cảnh SAI — output escape nhét thẳng vào <code>href</code></h3>
+      <!-- LỖ HỔNG: dev tưởng "đã escape là an toàn" rồi dùng cho href -->
+      <p><a href="{{ escaped }}">Bấm vào đây</a></p>
+      <small>Với payload <code>javascript:...</code>, bấm link sẽ chạy mã → XSS,
+        dù chuỗi đã qua html.escape.</small>
+    </div>
+
+    <div class="good">
+      <h3>✅ Bản vá — kiểm tra scheme bằng <code>validate_url</code> trước</h3>
+      <p><a href="{{ safe_href }}">Bấm vào đây</a></p>
+      <small><code>validate_url</code> chỉ chấp nhận http/https, nên
+        <code>javascript:</code> bị đổi thành <code>#</code> → vô hại.</small>
+    </div>
+    {% endif %}
+
+    <hr>
+    <p><a href="/">&larr; Về trang validator chính</a></p>
+  </main>
+</body>
+</html>

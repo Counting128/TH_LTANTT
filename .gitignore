@@ -1,0 +1,11 @@
+__pycache__/
+*.pyc
+.venv/
+venv/
+.vscode/
+.DS_Store
+
+# log/output do các lab tự sinh ra khi chạy, không commit
+gitsecure.log
+secure.log
+secure.log.sig
