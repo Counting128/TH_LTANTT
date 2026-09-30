@@ -5,7 +5,18 @@ venv/
 .vscode/
 .DS_Store
 
-# log/output do các lab tự sinh ra khi chạy, không commit
+# log/output do các lab tự sinh ra khi chạy
 gitsecure.log
 secure.log
 secure.log.sig
+
+# Bài 2 (sách trang 63): khoá riêng/chứng chỉ do mini-ca sinh ra, không commit
+certs/
+*.pem
+
+# Bài 2: file sinh ra khi cài package / chạy CLI, GUI, API, pytest
+*.egg-info/
+.pytest_cache/
+*.enc
+*.dec
+Bai2/crypto-toolkit/securecrypto/upload/
