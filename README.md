@@ -12,9 +12,9 @@ chạy, ảnh kết quả và các điểm khác với giáo trình.
 
 | Lab | Nội dung | README |
 |---|---|---|
-| Lab 1 | SecureValidator: ứng dụng Flask kiểm tra đầu vào (email, URL, filename, SQL, HTML) | [Bai1/Lab1/README.md](Bai1/Lab1/README.md) |
-| Lab 2 | GitSecure: pre-commit hook chặn commit chứa thông tin nhạy cảm | [Bai1/Lab2/README.md](Bai1/Lab2/README.md) |
-| Lab 3 | SecureLogger: ghi log an toàn, che dữ liệu nhạy cảm, phát hiện sửa log | [Bai1/Lab3/README.md](Bai1/Lab3/README.md) |
+| Lab1 | SecureValidator: ứng dụng Flask kiểm tra đầu vào (email, URL, filename, SQL, HTML) | [Bai1/Lab1/README.md](Bai1/Lab1/README.md) |
+| Lab2 | GitSecure: pre-commit hook chặn commit chứa thông tin nhạy cảm | [Bai1/Lab2/README.md](Bai1/Lab2/README.md) |
+| Lab3 | SecureLogger: ghi log an toàn, che dữ liệu nhạy cảm, phát hiện sửa log | [Bai1/Lab3/README.md](Bai1/Lab3/README.md) |
 
 ## Bài 2: Mã hoá, triển khai PKI
 
