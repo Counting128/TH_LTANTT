@@ -4,6 +4,7 @@ __pycache__/
 venv/
 .vscode/
 .DS_Store
+.claude
 
 # log/output do các lab tự sinh ra khi chạy
 gitsecure.log
@@ -20,6 +21,8 @@ certs/
 *.enc
 *.dec
 Bai2/crypto-toolkit/securecrypto/upload/
+.postman
+postman/
 
 # Bài 3 (sách trang 89): thông tin SMTP + log của netrecon, không commit
 .env
