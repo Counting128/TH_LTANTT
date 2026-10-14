@@ -5,9 +5,10 @@ chạy, ảnh kết quả và các điểm khác với giáo trình.
 
 | Bài | Nội dung | Chi tiết |
 |---|---|---|
-| Bài 1 | Lập trình an toàn | [Bai1/](Bai1/) |
+| Bài 1 | Lập trình an toàn | [Bai1/README.md](Bai1/README.md) |
 | Bài 2 | Mã hoá, triển khai PKI | [Bai2/README.md](Bai2/README.md) |
 | Bài 3 | Bảo mật mạng máy tính | [Bai3/README.md](Bai3/README.md) |
+| Bài 4 | Bảo mật Web App và API | [Bai4/README.md](Bai4/README.md) |
 
 ## Bài 1: Lập trình an toàn
 
@@ -32,6 +33,14 @@ chạy, ảnh kết quả và các điểm khác với giáo trình.
 | [Bai3/secure-chat/](Bai3/secure-chat/) | Chat qua SSL/TLS (mTLS), mã hoá đầu-cuối AES-256, quản lý kết nối và phòng chat |
 | [Bai3/netrecon/](Bai3/netrecon/) | Trinh sát mạng: quét cổng, nhận dạng dịch vụ, banner, ARP, tra CVE; có CLI, web Flask, gửi email |
 | [Bai3/screenshots/](Bai3/screenshots/) | Ảnh kết quả chạy |
+
+## Bài 4: Bảo mật Web App và API
+
+| Phần | Nội dung |
+|---|---|
+| [Bai4/web-vuln-scanner/](Bai4/web-vuln-scanner/) | Quét lỗ hổng web: XSS, SQL Injection, CSRF, SSRF; có báo cáo, web Flask và unittest |
+| [Bai4/jwt-security-tools/](Bai4/jwt-security-tools/) | Bảo mật JWT: validator, cracker, OAuth client, token manager, API gateway; có pytest |
+| [Bai4/screenshots/](Bai4/screenshots/) | Ảnh kết quả chạy |
 
 ## Môi trường
 
