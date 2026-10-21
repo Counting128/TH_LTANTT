@@ -9,6 +9,7 @@ chạy, ảnh kết quả và các điểm khác với giáo trình.
 | Bài 2 | Mã hoá, triển khai PKI | [Bai2/README.md](Bai2/README.md) |
 | Bài 3 | Bảo mật mạng máy tính | [Bai3/README.md](Bai3/README.md) |
 | Bài 4 | Bảo mật Web App và API | [Bai4/README.md](Bai4/README.md) |
+| Bài 5 | Phân tích và Kiểm thử Bảo mật (SAST & DAST) | [Bai5/README.md](Bai5/README.md) |
 
 ## Bài 1: Lập trình an toàn
 
@@ -41,6 +42,14 @@ chạy, ảnh kết quả và các điểm khác với giáo trình.
 | [Bai4/web-vuln-scanner/](Bai4/web-vuln-scanner/) | Quét lỗ hổng web: XSS, SQL Injection, CSRF, SSRF; có báo cáo, web Flask và unittest |
 | [Bai4/jwt-security-tools/](Bai4/jwt-security-tools/) | Bảo mật JWT: validator, cracker, OAuth client, token manager, API gateway; có pytest |
 | [Bai4/screenshots/](Bai4/screenshots/) | Ảnh kết quả chạy |
+
+## Bài 5: Phân tích và Kiểm thử Bảo mật (SAST & DAST)
+
+| Phần | Nội dung |
+|---|---|
+| [Bai5/sast-tool/](Bai5/sast-tool/) | Phân tích tĩnh (SAST): duyệt AST, dò pattern, bộ luật, kiểm tra chất lượng (flake8), xuất báo cáo SARIF; có unittest |
+| [Bai5/dast-tool/](Bai5/dast-tool/) | Phân tích động (DAST): giám sát runtime, bộ nhớ, mạng, hành vi và sandbox; có CLI, web API (Flask) và unittest |
+| [Bai5/screenshots/](Bai5/screenshots/) | Ảnh kết quả chạy |
 
 ## Môi trường
 
